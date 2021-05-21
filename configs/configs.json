@@ -1,0 +1,4 @@
+{
+    "api_service": "localhost:9090",
+    "user_service": "localhost:9091"
+}
