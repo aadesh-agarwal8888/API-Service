@@ -2,6 +2,7 @@
     "api_service": "localhost:9090",
     "user_service": "localhost:9091",
     "database": {
-        "db_host": "mongodb://localhost:27017"
+        "db_host": "mongodb://localhost:27017",
+        "db_name": "parking"
     }
 }

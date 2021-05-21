@@ -16,7 +16,9 @@ func main() {
 	}
 
 	router := mux.NewRouter()
-	router.HandleFunc("/login", handler.Login).Methods(http.MethodPost) //Login => Post
+	router.HandleFunc("/login", handler.Login).Methods(http.MethodPost)           //Login => Post
+	router.HandleFunc("/register", handler.RegisterUser).Methods(http.MethodPost) //Register => Post
+	router.HandleFunc("/user", handler.GetUserDetails).Methods(http.MethodGet)    //Get User Data
 
 	server := http.Server{
 		Addr:    configuration.Api_Service,
