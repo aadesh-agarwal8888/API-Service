@@ -7,8 +7,13 @@ import (
 )
 
 type Configuration struct {
-	Api_Service  string `json:"api-service"`
-	User_Service string `json:"user-service"`
+	Api_Service  string   `json:"api-service"`
+	User_Service string   `json:"user-service"`
+	DB           Database `json:"db"`
+}
+
+type Database struct {
+	Db_Host string `json:"db_host"`
 }
 
 var configuration *Configuration
