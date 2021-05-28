@@ -7,14 +7,24 @@ import (
 )
 
 type Configuration struct {
-	Api_Service  string   `json:"api-service"`
-	User_Service string   `json:"user-service"`
-	Database     Database `json:"db"`
+	Api_Service     string   `json:"api-service"`
+	User_Service    string   `json:"user-service"`
+	Parking_Service string   `json:"parking_service"`
+	Slot_Service    string   `json:"slot_service"`
+	Booking_Service string   `json:"booking_service"`
+	Payment_Service string   `json:"payment_service"`
+	MQTT_Service    string   `json:"mqtt_service"`
+	Database        Database `json:"db"`
+	MQTT            MQTT
 }
 
 type Database struct {
 	Db_Host string `json:"db_host"`
 	Db_Name string `json:"db_name"`
+}
+
+type MQTT struct {
+	Broker string `json:"broker"`
 }
 
 var configuration *Configuration

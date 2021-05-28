@@ -16,9 +16,18 @@ func main() {
 	}
 
 	router := mux.NewRouter()
+
+	//User handler
 	router.HandleFunc("/login", handler.Login).Methods(http.MethodPost)           //Login => Post
 	router.HandleFunc("/register", handler.RegisterUser).Methods(http.MethodPost) //Register => Post
-	router.HandleFunc("/user", handler.GetUserDetails).Methods(http.MethodGet)    //Get User Data
+	router.HandleFunc("/user", handler.GetUserDetails).Methods(http.MethodGet)    //Get User Data => GET
+
+	//ParkingArea handlers
+	router.HandleFunc("/home/park", handler.GetParkingAreas).Methods(http.MethodGet) //Fetch Parking Areas => GET
+
+	//Booking Slot
+	router.HandleFunc("/home/park/{id}", handler.GetFreeSlot).Methods(http.MethodGet) //Get Free Slot => GET
+	router.HandleFunc("/home/park/{id}", handler.BookSlot).Methods(http.MethodPost)   //Book the Slot => POST
 
 	server := http.Server{
 		Addr:    configuration.Api_Service,

@@ -1,8 +1,16 @@
 {
     "api_service": "localhost:9090",
-    "user_service": "localhost:9091",
+    "user_service": ":9091",
+    "parking_service": ":9092",
+    "slot_service": ":9093",
+    "booking_service": ":9004",
+    "payment_service": ":9005",
+    "mqtt_service": ":9006",
     "database": {
         "db_host": "mongodb://localhost:27017",
         "db_name": "parking"
+    },
+    "mqtt": {
+        "broker": "localhost:1883"
     }
 }
