@@ -126,6 +126,297 @@ func (x *BookingResponse) GetId() string {
 	return ""
 }
 
+type UpdateTimeRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	SlotId string `protobuf:"bytes,1,opt,name=slot_id,json=slotId,proto3" json:"slot_id,omitempty"`
+	Type   string `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
+}
+
+func (x *UpdateTimeRequest) Reset() {
+	*x = UpdateTimeRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_booking_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UpdateTimeRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateTimeRequest) ProtoMessage() {}
+
+func (x *UpdateTimeRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_booking_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateTimeRequest.ProtoReflect.Descriptor instead.
+func (*UpdateTimeRequest) Descriptor() ([]byte, []int) {
+	return file_booking_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *UpdateTimeRequest) GetSlotId() string {
+	if x != nil {
+		return x.SlotId
+	}
+	return ""
+}
+
+func (x *UpdateTimeRequest) GetType() string {
+	if x != nil {
+		return x.Type
+	}
+	return ""
+}
+
+type UpdateTimeResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+}
+
+func (x *UpdateTimeResponse) Reset() {
+	*x = UpdateTimeResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_booking_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UpdateTimeResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateTimeResponse) ProtoMessage() {}
+
+func (x *UpdateTimeResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_booking_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateTimeResponse.ProtoReflect.Descriptor instead.
+func (*UpdateTimeResponse) Descriptor() ([]byte, []int) {
+	return file_booking_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *UpdateTimeResponse) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+type GetBookingRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+}
+
+func (x *GetBookingRequest) Reset() {
+	*x = GetBookingRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_booking_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetBookingRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetBookingRequest) ProtoMessage() {}
+
+func (x *GetBookingRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_booking_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetBookingRequest.ProtoReflect.Descriptor instead.
+func (*GetBookingRequest) Descriptor() ([]byte, []int) {
+	return file_booking_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *GetBookingRequest) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+type GetBookingResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Booking  *Booking   `protobuf:"bytes,1,opt,name=booking,proto3" json:"booking,omitempty"`
+	Bookings []*Booking `protobuf:"bytes,2,rep,name=bookings,proto3" json:"bookings,omitempty"`
+}
+
+func (x *GetBookingResponse) Reset() {
+	*x = GetBookingResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_booking_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetBookingResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetBookingResponse) ProtoMessage() {}
+
+func (x *GetBookingResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_booking_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetBookingResponse.ProtoReflect.Descriptor instead.
+func (*GetBookingResponse) Descriptor() ([]byte, []int) {
+	return file_booking_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *GetBookingResponse) GetBooking() *Booking {
+	if x != nil {
+		return x.Booking
+	}
+	return nil
+}
+
+func (x *GetBookingResponse) GetBookings() []*Booking {
+	if x != nil {
+		return x.Bookings
+	}
+	return nil
+}
+
+type Booking struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Id              string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	SlotId          string `protobuf:"bytes,2,opt,name=slot_id,json=slotId,proto3" json:"slot_id,omitempty"`
+	ReservationTime string `protobuf:"bytes,3,opt,name=reservation_time,json=reservationTime,proto3" json:"reservation_time,omitempty"`
+	ParkTime        string `protobuf:"bytes,4,opt,name=park_time,json=parkTime,proto3" json:"park_time,omitempty"`
+	UnparkTime      string `protobuf:"bytes,5,opt,name=unpark_time,json=unparkTime,proto3" json:"unpark_time,omitempty"`
+	Status          string `protobuf:"bytes,6,opt,name=status,proto3" json:"status,omitempty"`
+}
+
+func (x *Booking) Reset() {
+	*x = Booking{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_booking_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *Booking) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Booking) ProtoMessage() {}
+
+func (x *Booking) ProtoReflect() protoreflect.Message {
+	mi := &file_booking_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Booking.ProtoReflect.Descriptor instead.
+func (*Booking) Descriptor() ([]byte, []int) {
+	return file_booking_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *Booking) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *Booking) GetSlotId() string {
+	if x != nil {
+		return x.SlotId
+	}
+	return ""
+}
+
+func (x *Booking) GetReservationTime() string {
+	if x != nil {
+		return x.ReservationTime
+	}
+	return ""
+}
+
+func (x *Booking) GetParkTime() string {
+	if x != nil {
+		return x.ParkTime
+	}
+	return ""
+}
+
+func (x *Booking) GetUnparkTime() string {
+	if x != nil {
+		return x.UnparkTime
+	}
+	return ""
+}
+
+func (x *Booking) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
 var File_booking_proto protoreflect.FileDescriptor
 
 var file_booking_proto_rawDesc = []byte{
@@ -137,12 +428,52 @@ var file_booking_proto_rawDesc = []byte{
 	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
 	0x49, 0x64, 0x22, 0x21, 0x0a, 0x0f, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73,
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x02, 0x69, 0x64, 0x32, 0x4b, 0x0a, 0x0e, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67,
+	0x09, 0x52, 0x02, 0x69, 0x64, 0x22, 0x40, 0x0a, 0x11, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x54,
+	0x69, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x73, 0x6c,
+	0x6f, 0x74, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x73, 0x6c, 0x6f,
+	0x74, 0x49, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x74, 0x79, 0x70, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x04, 0x74, 0x79, 0x70, 0x65, 0x22, 0x24, 0x0a, 0x12, 0x55, 0x70, 0x64, 0x61, 0x74,
+	0x65, 0x54, 0x69, 0x6d, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x0e, 0x0a,
+	0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x22, 0x23, 0x0a,
+	0x11, 0x47, 0x65, 0x74, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02,
+	0x69, 0x64, 0x22, 0x6a, 0x0a, 0x12, 0x47, 0x65, 0x74, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x28, 0x0a, 0x07, 0x62, 0x6f, 0x6f, 0x6b,
+	0x69, 0x6e, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x52, 0x07, 0x62, 0x6f, 0x6f, 0x6b, 0x69,
+	0x6e, 0x67, 0x12, 0x2a, 0x0a, 0x08, 0x62, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x73, 0x18, 0x02,
+	0x20, 0x03, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x42, 0x6f, 0x6f,
+	0x6b, 0x69, 0x6e, 0x67, 0x52, 0x08, 0x62, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x73, 0x22, 0xb3,
+	0x01, 0x0a, 0x07, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x73, 0x6c,
+	0x6f, 0x74, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x73, 0x6c, 0x6f,
+	0x74, 0x49, 0x64, 0x12, 0x29, 0x0a, 0x10, 0x72, 0x65, 0x73, 0x65, 0x72, 0x76, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x72,
+	0x65, 0x73, 0x65, 0x72, 0x76, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x1b,
+	0x0a, 0x09, 0x70, 0x61, 0x72, 0x6b, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x08, 0x70, 0x61, 0x72, 0x6b, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x1f, 0x0a, 0x0b, 0x75,
+	0x6e, 0x70, 0x61, 0x72, 0x6b, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x0a, 0x75, 0x6e, 0x70, 0x61, 0x72, 0x6b, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x16, 0x0a, 0x06,
+	0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x73, 0x74,
+	0x61, 0x74, 0x75, 0x73, 0x32, 0x95, 0x02, 0x0a, 0x0e, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67,
 	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x39, 0x0a, 0x08, 0x42, 0x6f, 0x6f, 0x6b, 0x53,
 	0x6c, 0x6f, 0x74, 0x12, 0x15, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x42, 0x6f, 0x6f, 0x6b,
 	0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x70, 0x72, 0x6f,
 	0x74, 0x6f, 0x2e, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x42, 0x04, 0x5a, 0x02, 0x2e, 0x2f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x73, 0x65, 0x12, 0x41, 0x0a, 0x0a, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x54, 0x69, 0x6d, 0x65,
+	0x12, 0x18, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x54,
+	0x69, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x54, 0x69, 0x6d, 0x65, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x41, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x42, 0x6f, 0x6f, 0x6b,
+	0x69, 0x6e, 0x67, 0x12, 0x18, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x42,
+	0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x42, 0x0a, 0x0b, 0x47, 0x65, 0x74, 0x42,
+	0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x73, 0x12, 0x18, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
+	0x47, 0x65, 0x74, 0x42, 0x6f, 0x6f, 0x6b, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x42, 0x6f, 0x6f,
+	0x6b, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x04, 0x5a, 0x02,
+	0x2e, 0x2f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -157,19 +488,32 @@ func file_booking_proto_rawDescGZIP() []byte {
 	return file_booking_proto_rawDescData
 }
 
-var file_booking_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_booking_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_booking_proto_goTypes = []interface{}{
-	(*BookingRequest)(nil),  // 0: proto.BookingRequest
-	(*BookingResponse)(nil), // 1: proto.BookingResponse
+	(*BookingRequest)(nil),     // 0: proto.BookingRequest
+	(*BookingResponse)(nil),    // 1: proto.BookingResponse
+	(*UpdateTimeRequest)(nil),  // 2: proto.UpdateTimeRequest
+	(*UpdateTimeResponse)(nil), // 3: proto.UpdateTimeResponse
+	(*GetBookingRequest)(nil),  // 4: proto.GetBookingRequest
+	(*GetBookingResponse)(nil), // 5: proto.GetBookingResponse
+	(*Booking)(nil),            // 6: proto.Booking
 }
 var file_booking_proto_depIdxs = []int32{
-	0, // 0: proto.BookingService.BookSlot:input_type -> proto.BookingRequest
-	1, // 1: proto.BookingService.BookSlot:output_type -> proto.BookingResponse
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	6, // 0: proto.GetBookingResponse.booking:type_name -> proto.Booking
+	6, // 1: proto.GetBookingResponse.bookings:type_name -> proto.Booking
+	0, // 2: proto.BookingService.BookSlot:input_type -> proto.BookingRequest
+	2, // 3: proto.BookingService.UpdateTime:input_type -> proto.UpdateTimeRequest
+	4, // 4: proto.BookingService.GetBooking:input_type -> proto.GetBookingRequest
+	4, // 5: proto.BookingService.GetBookings:input_type -> proto.GetBookingRequest
+	1, // 6: proto.BookingService.BookSlot:output_type -> proto.BookingResponse
+	3, // 7: proto.BookingService.UpdateTime:output_type -> proto.UpdateTimeResponse
+	5, // 8: proto.BookingService.GetBooking:output_type -> proto.GetBookingResponse
+	5, // 9: proto.BookingService.GetBookings:output_type -> proto.GetBookingResponse
+	6, // [6:10] is the sub-list for method output_type
+	2, // [2:6] is the sub-list for method input_type
+	2, // [2:2] is the sub-list for extension type_name
+	2, // [2:2] is the sub-list for extension extendee
+	0, // [0:2] is the sub-list for field type_name
 }
 
 func init() { file_booking_proto_init() }
@@ -202,6 +546,66 @@ func file_booking_proto_init() {
 				return nil
 			}
 		}
+		file_booking_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UpdateTimeRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_booking_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UpdateTimeResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_booking_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetBookingRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_booking_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetBookingResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_booking_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Booking); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -209,7 +613,7 @@ func file_booking_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_booking_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -236,6 +640,9 @@ const _ = grpc.SupportPackageIsVersion6
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type BookingServiceClient interface {
 	BookSlot(ctx context.Context, in *BookingRequest, opts ...grpc.CallOption) (*BookingResponse, error)
+	UpdateTime(ctx context.Context, in *UpdateTimeRequest, opts ...grpc.CallOption) (*UpdateTimeResponse, error)
+	GetBooking(ctx context.Context, in *GetBookingRequest, opts ...grpc.CallOption) (*GetBookingResponse, error)
+	GetBookings(ctx context.Context, in *GetBookingRequest, opts ...grpc.CallOption) (*GetBookingResponse, error)
 }
 
 type bookingServiceClient struct {
@@ -255,9 +662,39 @@ func (c *bookingServiceClient) BookSlot(ctx context.Context, in *BookingRequest,
 	return out, nil
 }
 
+func (c *bookingServiceClient) UpdateTime(ctx context.Context, in *UpdateTimeRequest, opts ...grpc.CallOption) (*UpdateTimeResponse, error) {
+	out := new(UpdateTimeResponse)
+	err := c.cc.Invoke(ctx, "/proto.BookingService/UpdateTime", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *bookingServiceClient) GetBooking(ctx context.Context, in *GetBookingRequest, opts ...grpc.CallOption) (*GetBookingResponse, error) {
+	out := new(GetBookingResponse)
+	err := c.cc.Invoke(ctx, "/proto.BookingService/GetBooking", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *bookingServiceClient) GetBookings(ctx context.Context, in *GetBookingRequest, opts ...grpc.CallOption) (*GetBookingResponse, error) {
+	out := new(GetBookingResponse)
+	err := c.cc.Invoke(ctx, "/proto.BookingService/GetBookings", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // BookingServiceServer is the server API for BookingService service.
 type BookingServiceServer interface {
 	BookSlot(context.Context, *BookingRequest) (*BookingResponse, error)
+	UpdateTime(context.Context, *UpdateTimeRequest) (*UpdateTimeResponse, error)
+	GetBooking(context.Context, *GetBookingRequest) (*GetBookingResponse, error)
+	GetBookings(context.Context, *GetBookingRequest) (*GetBookingResponse, error)
 }
 
 // UnimplementedBookingServiceServer can be embedded to have forward compatible implementations.
@@ -266,6 +703,15 @@ type UnimplementedBookingServiceServer struct {
 
 func (*UnimplementedBookingServiceServer) BookSlot(context.Context, *BookingRequest) (*BookingResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BookSlot not implemented")
+}
+func (*UnimplementedBookingServiceServer) UpdateTime(context.Context, *UpdateTimeRequest) (*UpdateTimeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateTime not implemented")
+}
+func (*UnimplementedBookingServiceServer) GetBooking(context.Context, *GetBookingRequest) (*GetBookingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetBooking not implemented")
+}
+func (*UnimplementedBookingServiceServer) GetBookings(context.Context, *GetBookingRequest) (*GetBookingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetBookings not implemented")
 }
 
 func RegisterBookingServiceServer(s *grpc.Server, srv BookingServiceServer) {
@@ -290,6 +736,60 @@ func _BookingService_BookSlot_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _BookingService_UpdateTime_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateTimeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BookingServiceServer).UpdateTime(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.BookingService/UpdateTime",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BookingServiceServer).UpdateTime(ctx, req.(*UpdateTimeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _BookingService_GetBooking_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetBookingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BookingServiceServer).GetBooking(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.BookingService/GetBooking",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BookingServiceServer).GetBooking(ctx, req.(*GetBookingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _BookingService_GetBookings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetBookingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BookingServiceServer).GetBookings(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.BookingService/GetBookings",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BookingServiceServer).GetBookings(ctx, req.(*GetBookingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _BookingService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "proto.BookingService",
 	HandlerType: (*BookingServiceServer)(nil),
@@ -297,6 +797,18 @@ var _BookingService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "BookSlot",
 			Handler:    _BookingService_BookSlot_Handler,
+		},
+		{
+			MethodName: "UpdateTime",
+			Handler:    _BookingService_UpdateTime_Handler,
+		},
+		{
+			MethodName: "GetBooking",
+			Handler:    _BookingService_GetBooking_Handler,
+		},
+		{
+			MethodName: "GetBookings",
+			Handler:    _BookingService_GetBookings_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

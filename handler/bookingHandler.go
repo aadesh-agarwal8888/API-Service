@@ -43,6 +43,54 @@ func BookSlot(res http.ResponseWriter, req *http.Request) {
 
 }
 
+func GetBookings(res http.ResponseWriter, req *http.Request) {
+	var user *types.User
+	json.NewDecoder(req.Body).Decode(&user)
+
+	client, err := ConnectToBookingService()
+	if err != nil {
+		log.Println(err)
+		http.Error(res, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	bookingRequest := &pb.GetBookingRequest{
+		Id: user.ID,
+	}
+
+	response, err := client.GetBookings(context.TODO(), bookingRequest)
+	if err != nil {
+		http.Error(res, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	json.NewEncoder(res).Encode(response)
+}
+
+func GetBooking(res http.ResponseWriter, req *http.Request) {
+	var user *types.User
+	json.NewDecoder(req.Body).Decode(&user)
+
+	client, err := ConnectToBookingService()
+	if err != nil {
+		log.Println(err)
+		http.Error(res, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	bookingRequest := &pb.GetBookingRequest{
+		Id: user.ID,
+	}
+
+	response, err := client.GetBooking(context.TODO(), bookingRequest)
+	if err != nil {
+		http.Error(res, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	json.NewEncoder(res).Encode(response)
+}
+
 func ConnectToBookingService() (pb.BookingServiceClient, error) {
 
 	configuration, err := configs.LoadConfigurations()
